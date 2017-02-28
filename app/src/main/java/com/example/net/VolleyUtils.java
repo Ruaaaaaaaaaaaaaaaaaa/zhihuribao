@@ -34,7 +34,7 @@ public class VolleyUtils {
         return volleyUtils;
     }
 
-    public void JSRequest(String s,Class c ){
+    public void JSRequest(String s, final Class c ){
         url = url+s;
         JsonObjectRequest jr = new JsonObjectRequest(Request.Method.GET,
                 url

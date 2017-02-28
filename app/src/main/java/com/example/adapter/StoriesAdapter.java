@@ -94,7 +94,7 @@ public class StoriesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         View view;
         if(viewType == CONTENT){
             view = LayoutInflater.from(mContext).inflate(R.layout.news_item,parent,false);
-            ContentViewHolder  holder =  new ContentViewHolder(view);
+            final ContentViewHolder  holder =  new ContentViewHolder(view);
             holder.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -107,7 +107,7 @@ public class StoriesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             return holder;
         }else if (viewType == CONTENT_NO_IMAGE){
             view = LayoutInflater.from(mContext).inflate(R.layout.news_item_no_img,parent,false);
-            ContentViewNoImageHolder holder = new ContentViewNoImageHolder(view);
+            final ContentViewNoImageHolder holder = new ContentViewNoImageHolder(view);
             holder.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

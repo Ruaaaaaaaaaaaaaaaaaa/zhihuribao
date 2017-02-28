@@ -30,7 +30,7 @@ public class Test {
         mContext = context;
         mRequestQueue = Volley.newRequestQueue(context);
     }
-    public  void getPic(String url, ImageView imageView)
+    public  void getPic(String url, final ImageView imageView)
     {
         ImageRequest imageRequest = new ImageRequest(
                url,

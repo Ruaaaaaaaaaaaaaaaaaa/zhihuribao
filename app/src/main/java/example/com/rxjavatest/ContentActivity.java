@@ -36,7 +36,7 @@ public class ContentActivity extends AppCompatActivity {
         CollapsingToolbarLayout collapsingToolbarLayout =
                 (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsingToolbarLayout.setTitle("title");
-        ImageView TopImageView = (ImageView) findViewById(R.id.top_image);
+        final ImageView TopImageView = (ImageView) findViewById(R.id.top_image);
 
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
@@ -48,7 +48,7 @@ public class ContentActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String s = intent.getStringExtra("id");
 
-        WebView webView = (WebView) findViewById(R.id.web_view);
+        final WebView webView = (WebView) findViewById(R.id.web_view);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
 

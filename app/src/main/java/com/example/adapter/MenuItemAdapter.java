@@ -127,7 +127,7 @@ public class MenuItemAdapter extends BaseAdapter
                             parent, false);
                 }
                 TextView subHeader = (TextView) convertView.findViewById(R.id.title);
-                ImageView iconImage = (ImageView) convertView.findViewById(R.id.plus_or_add);
+                final ImageView iconImage = (ImageView) convertView.findViewById(R.id.plus_or_add);
                 subHeader.setText(item.name);
                 subHeader.setTextColor(Color.BLACK);
                 iconImage.setOnClickListener(new View.OnClickListener() {

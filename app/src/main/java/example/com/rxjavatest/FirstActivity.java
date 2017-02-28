@@ -106,7 +106,7 @@ public class FirstActivity extends AppCompatActivity {
 
         mRequestQueue = Volley.newRequestQueue(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.mDrawerlayout);
 
@@ -503,10 +503,10 @@ public class FirstActivity extends AppCompatActivity {
                             whiteCicle.setImageDrawable(getResources().
                                     getDrawable(R.drawable.ic_circle_white, null));
                             ((RelativeLayout) ll.getParent()).addView(whiteCicle);
-                            int l = ll.getLeft();
-                            int t = ll.getTop();
-                            int r = l+WmjUtils.dp2px(getApplicationContext(),10);
-                            int b = t+WmjUtils.dp2px(getApplicationContext(),10);
+                            final int l = ll.getLeft();
+                            final int t = ll.getTop();
+                            final int r = l+WmjUtils.dp2px(getApplicationContext(),10);
+                            final int b = t+WmjUtils.dp2px(getApplicationContext(),10);
                             whiteCicle.layout(l+ offset,
                                     t,
                                     r+ offset,
